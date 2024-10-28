@@ -17,7 +17,7 @@
 
 ```bash
 
-node app
+node app.js
 
 ```
 

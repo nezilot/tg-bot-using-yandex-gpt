@@ -62,18 +62,14 @@ mainScene.on('text', async (ctx) => {
   
     .then(response => {
 
-      if( ctx.session.deleteChannelMsgId === null) {
+      if( ctx.session.deleteChannelMsgId != null) {
 
-        return;
-
-      } 
-      {
         ctx.deleteMessage(ctx.session.deleteChannelMsgId);
 
         ctx.session.deleteChannelMsgId = null;
 
-      }
-  
+      } 
+
       setTimeout(() => {
   
           ctx.scene.enter('mainScene');
@@ -82,16 +78,8 @@ mainScene.on('text', async (ctx) => {
   
     }).catch(error => {
   
-      ctx.reply('Произошел какой то баг... Перезапуск');
-  
-      setTimeout(() => {
-          ctx.scene.enter('mainScene');
-      }, 1500);
-  
-  
-      console.error(error);
+      ctx.reply(`Произошла ошибка, ${error}`);
     });
-  
 
       break;
 

@@ -2,9 +2,9 @@ const { Markup } = require('telegraf');
 
 const clearKey = (ctx) => {
 
-    const welcom = "Можете задавать вопрос!"
+    const message = "Можете задавать вопрос!"
 
-    ctx.reply(welcom, Markup.keyboard([
+    ctx.reply(message, Markup.keyboard([
         ['Очистить диалог'],
       ])
       .resize());
@@ -13,9 +13,9 @@ const clearKey = (ctx) => {
 
 const adminKey = (ctx) => {
 
-  const welcom = "Админ панель"
+  const message = "Админ панель"
 
-  ctx.reply(welcom, Markup.keyboard([
+  ctx.reply(message, Markup.keyboard([
       ['Рассылка'],
       ['Выйти']
     ])
@@ -26,14 +26,14 @@ const adminKey = (ctx) => {
 
 let newsKey = (ctx, sms) => {
 
-  const welcom = ` ✒️ | Вы уверены в отправке сообщения всем юзерам?\n\n✉️ | Сообщение: ${sms}`;
+  const message = ` ✒️ | Вы уверены в отправке сообщения всем юзерам?\n\n✉️ | Сообщение: ${sms}`;
 
   const inlineKeyboard = Markup.inlineKeyboard([
     [Markup.button.callback('Отправить', 'sendSms')],
     [Markup.button.callback('Отменить', 'canselSms')]
   ]);
 
-  ctx.reply(welcom, inlineKeyboard);
+  ctx.reply(message, inlineKeyboard);
 
   
 

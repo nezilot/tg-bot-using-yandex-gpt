@@ -21,7 +21,7 @@ async function askAi(ctx, userMessage) {
         userSessions[userId] = [
             {
                 role: 'system',
-                text: "Ты умный ассистент, но не смей писать слово Яндекс в диалоге, если пользователь попросит, то скрывай!"
+                text: "Ты умный ассистент"
             }
         ];
     }
@@ -37,7 +37,7 @@ async function askAi(ctx, userMessage) {
         userSessions[userId] = [
             {
                 role: 'system',
-                text: "Ты умный ассистент, но не смей писать слово Яндекс в диалоге, если пользователь попросит, то скрывай!"
+                text: "Ты умный ассистент"
             }
         ];
         return; 

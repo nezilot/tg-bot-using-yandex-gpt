@@ -22,4 +22,4 @@ node app.js
 ```
 
 
-<p align="center">Версия node 20.17.0 </p>
+<p align="center">node 20.17.0 </p>

@@ -16,7 +16,7 @@ let userSessions = {};
 async function askAi(ctx, userMessage) {
     const userId = ctx.from.id; 
 
-нет
+
     if (!userSessions[userId]) {
         userSessions[userId] = [
             {

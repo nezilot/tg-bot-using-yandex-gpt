@@ -1,5 +1,6 @@
 const { message } = require('telegraf/filters');
 const { saveUser } = require('../bd/bd'); 
+const config = require('../config');
 
 async function savenewUser(ctx, userId) {
 
@@ -11,25 +12,19 @@ async function savenewUser(ctx, userId) {
 
        let sms = `Новый пользователь в боте | ${name}`;
 
-       ctx.telegram.sendMessage(7209442833, sms);
+        config.admins.forEach(adminId => { 
+            ctx.telegram.sendMessage(adminId, sms)
+        });
 
     }
 };
 
 async function chekAdmins(id, admins) {
-
-
-if (admins.includes(id)) {
-    
-    return true;
-
-} else {
-
-    return false;
-
-};
-
-
+    if (admins.includes(id)) {
+        return true;
+    } else {
+        return false;
+    };
 };
 
 

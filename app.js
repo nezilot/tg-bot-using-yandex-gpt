@@ -34,7 +34,7 @@ gpt.use((ctx, next) => {
 
     } else {
 
-        ctx.reply('У тебя нет доступа, малыш :D');
+        ctx.reply('Вы не являетесь админом');
         
     };
 
@@ -48,7 +48,7 @@ gpt.start((ctx) => {
 
     savenewUser(ctx, id);
     
-    ctx.reply('Вы попали в чат гпт');
+    ctx.reply('Можете задать любой вопрос, а я на него отвечу');
 
     ctx.scene.enter('mainScene');
 

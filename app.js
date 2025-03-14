@@ -2,7 +2,7 @@ const { Telegraf, Scenes} = require('telegraf');
 const { session } = require('telegraf/session');
 const config = require('./config');
 const { savenewUser, chekAdmins } = require('./tools/cmnd');
-const { mainScene, adminScene, tgNews } = require('./tools/session');
+const { mainScene, adminScene, tgNews } = require('./tools/scenes');
 
 const gpt = new Telegraf(config.token);
 

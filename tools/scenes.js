@@ -22,7 +22,7 @@ mainScene.on('text', async (ctx) => {
 
       case '/start':
 
-      ctx.reply('Вы уже можеете задавать вопросы О.о');
+      ctx.reply('Вы уже можеете задавать вопрос');
 
       break;
 
@@ -39,7 +39,7 @@ mainScene.on('text', async (ctx) => {
           ctx.scene.enter('adminScene');
 
       } else {
-          ctx.reply('У тебя нет доступа, малыш :D');
+          ctx.reply('У вас нет доступа!');
       };
 
       break;
